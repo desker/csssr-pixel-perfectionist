@@ -1,0 +1,6 @@
+mixin input-text(list)
+	each item in list
+		label.input_text
+			span.input_text__label= item.label
+			span.input_text__box
+				input(type='text' value=item.value)

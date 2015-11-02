@@ -7,9 +7,21 @@ include ../col/col
 include ../arrow/arrow
 include ../fork/fork
 include ../tree/tree
-include ../form/form
+include ../input-text/input-text
 
 mixin index()
 	.index
 		.index__title
 			img(src='assets/images/title.png')
+
+		form.personal-data
+			+input-text([
+				{
+					label: "Полное ФИО",
+					value: "Каринский Сергей Александрович"
+				}
+			])
+			//- +input-text("Год рождения", "1992")
+			//- +input-text("Место жительства", "г. Бийск, Алтайский край")
+			//- +input-text("Скайп", "desker.name")
+			//- +input-text("Почта", "karinsky.name@gmail.com")

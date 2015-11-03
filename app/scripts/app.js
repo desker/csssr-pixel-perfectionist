@@ -2,13 +2,18 @@ import 'svg4everybody';
 import $ from 'jquery';
 
 $(() => {
-	const baseLeft = $('.slider__bar').offset().left;
-	const baseWidth = $('.slider__bar').width();
+	let baseLeft = $('.slider__bar').offset().left;
+	let baseWidth = $('.slider__bar').width();
 	const slide = $('.slider__value');
 	let isSlide = false;
 
 	slide.mousedown(() => {
 		isSlide = true;
+	});
+
+	$(window).resize(() => {
+		baseLeft = $('.slider__bar').offset().left;
+		baseWidth = $('.slider__bar').width();
 	});
 
 	$(window).mousemove(e => {

@@ -16,8 +16,18 @@
 		&:checked + .checkbox__label:before
 			position absolute
 			left 3px
-			top: 6px
+			top 6px
 			width 21px
 			height 27px
 			content ''
 			background url('../images/checked.png')
+			
+@media (max-width: 1024px)
+	.checkbox
+		&__label
+			font-size 16px
+			background-position left top 10px
+			padding 10px 0 5px 28px
+			
+		input:checked + .checkbox__label:before
+			top 1px

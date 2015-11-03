@@ -42,6 +42,13 @@
       &:before
         height 20px
         
-    &:last-child:before
-      left auto
-      right 0
+    &:last-child
+      text-align right
+      &:before
+        left auto
+        right 0
+        
+@media (max-width: 1024px)
+  .slider
+    &__labels
+      height 100px

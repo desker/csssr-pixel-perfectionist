@@ -11,6 +11,7 @@ include ../textbox/textbox
 include ../radiobutton/radiobutton
 include ../checkbox/checkbox
 include ../slider/slider
+include ../fieldset/fieldset
 
 mixin index()
 	.index
@@ -18,14 +19,14 @@ mixin index()
 			img(src='assets/images/title.png')
 
 		form.personal-data
-			fieldset
+			+fieldset()
 				+textbox('Полное ФИО')(value='Каринский Сергей Александрович')
 				+textbox('Год рождения')(value='1992')
 				+textbox('Место жительства')(value='г. Бийск, Алтайский край')
 				+textbox('Скайп')(value='desker.name')
 				+textbox('Почта')(value='karinsky.name@gmail.com')
 
-			fieldset
+			+fieldset()
 				span.label
 					|Выпускник 
 					a(href='http://htmlacademy.ru' target='_blank')
@@ -34,7 +35,7 @@ mixin index()
 				+radiobutton('Да')(name='academy')
 				+radiobutton('Нет')(name='academy' checked)
 
-			fieldset
+			+fieldset()
 				.label= 'Практические навыки'
 				+container()
 					+col(class='col-1-3')
@@ -52,7 +53,7 @@ mixin index()
 						+checkbox('Знаю (изучаю) Angular')(name='skills')
 						+checkbox('Верстка под Android')(name='skills' checked)
 						+checkbox('Верстка под iOS')(name='skills' checked)
-						+checkbox('Верстка под Windows Phone')(name='skills' checked)
+						+checkbox('Верстка под Windows Phone')(name='skills')
 
 					+col(class='col-1-3')
 						+checkbox('Верстка рассылок')(name='skills' checked)
@@ -61,7 +62,7 @@ mixin index()
 						+checkbox('Использую Gmail')(name='skills' checked)
 						+checkbox('Использую GitHub')(name='skills' checked)
 
-			fieldset
+			+fieldset()
 				.label Уровень владения JavaScript
 				+slider([
 					[0, 'Не владею'],
@@ -70,6 +71,5 @@ mixin index()
 					['100%', 'Пишу сложные скрипты']
 				])
 
-			fieldset
-				+col(class='col-1-2')
-					+textbox('Дата заполнения')(value='03.11.2015')
+			+fieldset()
+				+textbox('Дата заполнения')(value='03.11.2015' style='width: 210px;')

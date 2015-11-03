@@ -1,0 +1,23 @@
+.checkbox
+	cursor pointer
+	
+	&__label
+		display block
+		font-size 21px
+		color #000
+		font-weight bold
+		padding 13px 0 0 28px
+		background url('../images/checkbox.png') left top 16px no-repeat
+		position relative
+		
+	input
+		display none
+		
+		&:checked + .checkbox__label:before
+			position absolute
+			left 3px
+			top: 6px
+			width 21px
+			height 27px
+			content ''
+			background url('../images/checked.png')

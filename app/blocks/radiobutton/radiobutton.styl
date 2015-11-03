@@ -1,0 +1,17 @@
+.radiobutton
+	cursor pointer
+	margin-left 20px
+	
+	&__label
+		display inline-block
+		font-weight bold
+		padding-left 32px
+		height 26px
+		padding-top 2px
+		background url('../images/radio_empty.png') left no-repeat
+		
+	input
+		display none
+		
+		&:checked + .radiobutton__label
+			background-image url('../images/radio_full.png')

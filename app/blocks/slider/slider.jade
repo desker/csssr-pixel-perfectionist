@@ -1,0 +1,10 @@
+mixin slider(list)
+	.slider
+		.slider__bar
+			.slider__value(style='left: 100%;')
+		.slider__labels
+			each item in list
+				if item[0]=='100%'
+					.slider__label(style='right: 0;')= item[1]
+				else
+					.slider__label(style='left: '+item[0]+';')= item[1]

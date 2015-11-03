@@ -1,0 +1,47 @@
+.slider
+  padding 20px 0 0
+  
+  &__bar
+    position relative
+    height 20px
+    background url('../images/underline.png') left bottom repeat-x
+    
+  &__labels
+    overflow hidden
+    position relative
+    height 60px
+    margin-top -1px
+    
+  &__value
+    width 17px
+    height 14px
+    margin-left -8px
+    background url('../images/slider.png')
+    position absolute
+    left 0
+    top 0
+    cursor pointer;
+    
+  &__label
+    position absolute
+    top 30px
+    font-size 13px
+    font-weight bold
+    max-width 25%
+    
+    &:before
+      position absolute
+      left 0
+      top -30px
+      width 2px
+      background #422720
+      height 10px
+      content ''
+      
+    &:first-child, &:last-child
+      &:before
+        height 20px
+        
+    &:last-child:before
+      left auto
+      right 0
